@@ -1,1 +1,122 @@
+                       ///////////////// PROBLEM1
+#include <iostream>
+using namespace std;
 
+int multiplyFunction(int num1, int num2) {
+	return (num1 * num2);
+}
+
+int main() {
+	int a, b;
+	cout << "Enter first value: ";
+	cin >> a;
+	cout << "Enter seconde value: ";
+	cin >> b;
+
+	cout << "Result : " << multiplyFunction(a, b);
+	return 0;
+}
+
+                  //////////////////////PROBLEM2
+#include <iostream>
+using namespace std;
+
+int sumFunction(int value) {
+	int result = 0;
+	while (value != 0) {
+		result = result + value % 10;
+		value /= 10;
+	}
+	return result;
+}
+
+int main() {
+	int a;
+	cout << "Enter a value: ";
+	cin >> a;
+
+	cout << "Result : " << sumFunction(a);
+	return 0;
+}
+                           /////////////////////////PROBLEM3
+#include <iostream>
+using namespace std;
+
+int main() {
+    int decimal, binary = 0, remainder, product = 1;
+    cin >> decimal;
+    while (decimal != 0) {
+        remainder = decimal % 2;
+        binary = binary + (remainder * product);
+        decimal = decimal / 2;
+        product *= 10;
+    }
+    cout << "Enter a valur:  " << binary;
+    return 0;
+}
+                       /////////////////PROBLEM4
+#include <iostream>
+using namespace std;
+
+int main(){
+	int arr1[4] = { 8,3,4,1 };
+	int arr2[4] = { 4,5,6,2 };
+	int arr3[4] = { 1,3,5,7 };
+	int sum1{ 0 }, sum2{ 0 }, sum3{ 0 };
+	for (int i = 0; i < 4; i++) {
+		sum1 += arr1[i];
+		sum2 += arr2[i];
+		sum3 += arr3[i];
+	}
+
+	cout << sum1 << endl;
+	cout << sum2 << endl;
+	cout << sum3 << endl;
+}
+
+                      ///////////////////////PROLEM5
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int r, c, a[10][10], b[10][10], sum[10][10], i, j;
+
+    cout << "Enter number of rows: ";
+    cin >> r;
+
+    cout << "Enter number of columns: ";
+    cin >> c;
+
+    cout << endl << "Enter elements of 1st matrix: " << endl;
+
+    for (i = 0; i < r; ++i)
+        for (j = 0; j < c; ++j)
+        {
+            cout << "Enter element a " << i + 1  << j + 1 << " : ";
+            cin >> a[i][j];
+        }
+
+    cout << endl << "Enter elements of 2nd matrix: " << endl;
+    for (i = 0; i < r; ++i)
+        for (j = 0; j < c; ++j)
+        {
+            cout << "Enter element b " << i + 1 << j + 1 << " : ";
+            cin >> b[i][j];
+        }
+
+    for (i = 0; i < r; ++i)
+        for (j = 0; j < c; ++j)
+            sum[i][j] = a[i][j] + b[i][j];
+
+    cout << endl << "Sum of two matrix is: " << endl;
+    for (i = 0; i < r; ++i)
+        for (j = 0; j < c; ++j)
+        {
+            cout << sum[i][j] << "  ";
+            if (j == c - 1)
+                cout << endl;
+        }
+
+    return 0;
+} 
