@@ -71,6 +71,7 @@ int main()
     {
         cin >> *(arrPtr+i);
     }
+    cout << endl;
     sort(arr, arr + num);
     for (int i = 0; i < num; i++)
     {
@@ -99,15 +100,14 @@ int max_element(int *p1, int n1)
 
 int main()
 {
-    int n1, n2;
-    cin >> n1;
-    int arr1[n1];
+    int num1, num2;
+    cin >> num1;
+    int arr1[num1];
     int *p1 = arr1;
-    max_element(p1, n1);
-    cin >> n2;
-    int arr2[n2];
+    max_element(p1, num1);
+    cin >> num2;
+    int arr2[num2];
     int *p2 = arr2;
-    max_element(p2, n2);
-    cout << *p1 * (*p2) << "\n";
-    // cout<<(*p2)*(*p1);
+    max_element(p2, num2);
+    cout << *p1 * (*p2) << endl;
 }
